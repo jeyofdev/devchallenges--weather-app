@@ -1,0 +1,12 @@
+{
+    "extends": ["stylelint-config-standard", "stylelint-config-prettier"],
+    "fix": true,
+    "formatter": "verbose",
+    "rules": {
+        "no-empty-source": null,
+        "declaration-colon-newline-after": null,
+        "selector-pseudo-element-colon-notation": "single",
+        "no-descending-specificity": null
+    },
+    "syntax": "css"
+}
