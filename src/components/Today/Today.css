@@ -1,0 +1,108 @@
+.today_weather {
+    position: relative;
+    background: var(--color-dark);
+    overflow: hidden;
+}
+
+/* ====================
+    IMAGES
+==================== */
+.today_weather .today_img {
+    position: relative;
+    padding-top: 41px;
+}
+
+@media (max-width: 768px) {
+    .today_weather .today_img {
+        padding-top: 65px;
+    }
+}
+
+.today_weather .today_img > div {
+    position: relative;
+}
+
+.today_weather .today_img .today_bg_cloud {
+    position: relative;
+    left: -35%;
+    opacity: 0.1;
+    width: 170%;
+}
+
+.today_weather .today_img .today_weather_img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 150px;
+}
+
+/* ====================
+    CONTENT
+==================== */
+.today_weather .today_content .content_temperature {
+    font-weight: 500;
+    font-size: 144px;
+    line-height: 0.8;
+    color: var(--color-light);
+    text-align: center;
+    margin-bottom: 23px;
+}
+
+.today_weather .today_content .content_temperature > span {
+    font-weight: 300;
+    font-size: 48px;
+}
+
+.today_weather .today_content .content_type {
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 42px;
+    text-align: center;
+    color: var(--color-gray-300);
+    margin-bottom: 30px;
+    margin-top: 43px;
+}
+
+@media (min-width: 768px) {
+    .today_weather .today_content .content_type {
+        margin-top: 87px;
+        margin-bottom: 48px;
+    }
+}
+
+.today_weather .today_content .content_day {
+    font-weight: 500;
+    font-size: 1.1rem;
+    line-height: 21px;
+    color: var(--color-gray-100);
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+@media (min-width: 768px) {
+    .today_weather .today_content .content_day {
+        margin-bottom: 48px;
+    }
+}
+
+.today_weather .today_content .content_day > span {
+    margin: 0 1rem;
+    line-height: 11px;
+    font-size: 1.25rem;
+}
+
+.today_weather .today_content .content_localisation {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: var(--color-gray-100);
+    text-align: center;
+    padding-bottom: 3rem;
+}
+
+.today_weather .today_content .content_localisation > span:first-child {
+    margin-right: 4px;
+}

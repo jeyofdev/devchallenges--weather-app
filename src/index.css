@@ -133,3 +133,34 @@ table {
     border-collapse: collapse;
     border-spacing: 0;
 }
+
+div,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span {
+    font-family: var(--font-family-primary);
+    font-style: normal;
+    line-height: 1;
+}
+
+p {
+    font-size: 1rem;
+}
+
+.icon {
+    font-size: 1.4rem;
+    line-height: 0.9;
+}
+
+.loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    min-height: 100vh;
+}

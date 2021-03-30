@@ -5,6 +5,7 @@ import {
     setLocationCityAction,
     setLocationInfosAction,
 } from '../../state/actions/weatherAction';
+import Today from '../../components/Today/Today';
 import './App.css';
 
 const App = () => {
@@ -24,7 +25,11 @@ const App = () => {
             dispatch(setDayTodayAction(location.infos));
         }
     }, [location]);
-    return <div className="App">App</div>;
+    return (
+        <div className="App">
+            <Today />
+        </div>
+    );
 };
 
 export default App;

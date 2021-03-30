@@ -4,10 +4,20 @@
     VARIABLES
 ==================== */
 :root {
+    --gutter: 24px;
+
     --color-light: #e7e7eb;
+    --color-dark: #1e213a;
+    --color-gray-100: #88869d;
+    --color-gray-300: #a09fb1;
     --color-bg: #100e1d;
+
+    --font-family-primary: 'Raleway', sans-serif;
 }
 
+/* ====================
+    APP
+==================== */
 .App {
     display: grid;
     grid-template-columns: 1fr;
@@ -28,5 +38,56 @@
 @media (min-width: 1200px) {
     .App {
         grid-template-columns: 30% 70%;
+    }
+}
+
+/* ====================
+    CONTAINER
+==================== */
+.container {
+    position: relative;
+    width: 100%;
+    padding-right: var(--gutter);
+    padding-left: var(--gutter);
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.today_weather .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+@media (max-width: 768px) {
+    .today_weather,
+    .today_weather .container {
+        min-height: 100vh;
+    }
+}
+
+@media (min-width: 768px) {
+    .today_weather .container {
+        padding-top: 42px;
+        max-width: 904px;
+        min-height: 100vh;
+        position: fixed;
+        width: 40%;
+        padding-bottom: 52px;
+        overflow: hidden;
+    }
+}
+
+@media (min-width: 1200px) {
+    .today_weather .container {
+        width: 30%;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1200px) and (orientation: landscape) {
+    .today_weather .container {
+        position: absolute;
+        width: 100%;
+        overflow: auto;
     }
 }
