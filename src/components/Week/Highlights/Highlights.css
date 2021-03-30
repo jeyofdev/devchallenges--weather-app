@@ -1,0 +1,74 @@
+/* ====================
+    HIGHTLIGHTS
+==================== */
+.descriptif_weather .weather_today_hightlights {
+    margin-top: 51px;
+}
+
+.descriptif_weather .weather_today_hightlights > h2 {
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: var(--color-light);
+    margin-bottom: 32px;
+}
+
+.descriptif_weather .weather_today_hightlights .infos {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 32px;
+}
+
+@media (min-width: 992px) {
+    .descriptif_weather .weather_today_hightlights .infos {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.descriptif_weather .weather_today_hightlights .infos .info_item {
+    background: var(--color-dark);
+    padding: 22px 15px 30px;
+    text-align: center;
+}
+
+.descriptif_weather .weather_today_hightlights .infos .info_item h4 {
+    font-weight: 500;
+    font-size: 1rem;
+    color: var(--color-light);
+    margin-bottom: 24px;
+}
+
+.descriptif_weather .weather_today_hightlights .infos .info_item .data {
+    font-weight: 700;
+    font-size: 64px;
+    line-height: 75px;
+    color: var(--color-light);
+}
+
+.descriptif_weather .weather_today_hightlights .infos .info_item .data > span {
+    font-size: 36px;
+    font-weight: 500;
+}
+
+.descriptif_weather .weather_today_hightlights .infos .info_item .option {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 500;
+    font-size: 14px;
+    color: var(--color-light);
+    margin-top: 24px;
+}
+
+.descriptif_weather
+    .weather_today_hightlights
+    .infos
+    .info_item
+    .option
+    > .icon {
+    background: rgba(255, 255, 255, 0.3);
+    font-size: 1.5rem;
+    transform: rotate(-180deg);
+    border-radius: 100%;
+    padding: 6px;
+    margin-right: 9px;
+}

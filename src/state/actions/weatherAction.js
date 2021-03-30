@@ -51,14 +51,14 @@ export const setLocationInfosAction = (locationCity) => {
                         min: day.min_temp,
                         temp: day.the_temp,
                     },
-                    visibility: day.visibility,
+                    visibility: day.visibility.toFixed(1),
                     weather_state: {
                         abbr: day.weather_state_abbr,
                         name: day.weather_state_name,
                     },
                     wind: {
                         direction: day.wind_direction,
-                        speed: day.wind_speed,
+                        speed: Math.round(day.wind_speed),
                     },
                 }));
 

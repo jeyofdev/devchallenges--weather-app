@@ -7,8 +7,9 @@ import {
     setLocationInfosAction,
 } from '../../state/actions/weatherAction';
 import Today from '../../components/Today/Today';
-import './App.css';
 import WeekCardList from '../WeekCardList/WeekCardList';
+import Highlights from '../../components/Week/Highlights/Highlights';
+import './App.css';
 
 const App = () => {
     const dispatch = useDispatch();
@@ -35,6 +36,7 @@ const App = () => {
             <div className="descriptif_weather">
                 <div className="container">
                     <WeekCardList />
+                    {days.today !== null && <Highlights />}
                 </div>
             </div>
         </div>
