@@ -1,0 +1,3 @@
+const SET_SEARCH_CITY = 'SET_SEARCH_CITY';
+
+export default SET_SEARCH_CITY;
