@@ -9,9 +9,24 @@
 }
 
 .App {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0;
     background: var(--color-bg);
     color: var(--color-light);
     width: 100%;
     min-height: 100vh;
     overflow-x: hidden;
+}
+
+@media (min-width: 768px) {
+    .App {
+        grid-template-columns: 40% 60%;
+    }
+}
+
+@media (min-width: 1200px) {
+    .App {
+        grid-template-columns: 30% 70%;
+    }
 }
