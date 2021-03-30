@@ -4,15 +4,17 @@ import moment from 'moment';
 import { MdPlace } from 'react-icons/md';
 import generateImage from '../../helpers/imageHelpers';
 import CloudBackground from '../../assets/img/Cloud-background.png';
-import Loading from '../Ui/Loader/Loading';
-import './Today.css';
+import Loading from '../../components/Ui/Loader/Loading';
+import Header from '../../components/Aside/Header';
+import './Aside.css';
 
-const Today = () => {
+const Aside = () => {
     const { location, days } = useSelector((state) => state.weather);
 
     return (
         <div className="today_weather">
             <div className="container">
+                <Header />
                 {days.today ? (
                     <>
                         <div className="today_img">
@@ -58,4 +60,4 @@ const Today = () => {
     );
 };
 
-export default Today;
+export default Aside;

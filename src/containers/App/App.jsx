@@ -6,7 +6,7 @@ import {
     setLocationCityAction,
     setLocationInfosAction,
 } from '../../state/actions/weatherAction';
-import Today from '../../components/Today/Today';
+import Aside from '../Aside/Aside';
 import Main from '../Main/Main';
 import './App.css';
 
@@ -31,7 +31,7 @@ const App = () => {
 
     return (
         <div className="App">
-            <Today />
+            <Aside />
             <Main />
         </div>
     );
