@@ -2,9 +2,9 @@ import React from 'react';
 import { useSelector } from 'react-redux';
 import moment from 'moment';
 import { MdPlace } from 'react-icons/md';
-import Loader from 'react-loader-spinner';
 import generateImage from '../../helpers/imageHelpers';
 import CloudBackground from '../../assets/img/Cloud-background.png';
+import Loading from '../Ui/Loader/Loading';
 import './Today.css';
 
 const Today = () => {
@@ -51,15 +51,7 @@ const Today = () => {
                         </div>
                     </>
                 ) : (
-                    <div className="loading">
-                        <Loader
-                            type="TailSpin"
-                            color="var(--color-light)"
-                            height={100}
-                            width={100}
-                            timeout={10000}
-                        />
-                    </div>
+                    <Loading />
                 )}
             </div>
         </div>

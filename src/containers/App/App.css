@@ -97,6 +97,5 @@
     .today_weather .container {
         position: absolute;
         width: 100%;
-        overflow: auto;
     }
 }

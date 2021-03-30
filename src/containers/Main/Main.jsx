@@ -2,6 +2,7 @@ import React from 'react';
 import { useSelector } from 'react-redux';
 import Header from '../../components/Main/Header/Header';
 import Highlights from '../../components/Main/Highlights/Highlights';
+import Loading from '../../components/Ui/Loader/Loading';
 import WeekCardList from '../WeekCardList/WeekCardList';
 
 const Main = () => {
@@ -10,9 +11,15 @@ const Main = () => {
     return (
         <div className="descriptif_weather">
             <div className="container">
-                <Header />
-                <WeekCardList />
-                {days.today !== null && <Highlights />}
+                {days.today !== null ? (
+                    <>
+                        <Header />
+                        <WeekCardList />
+                        <Highlights />
+                    </>
+                ) : (
+                    <Loading />
+                )}
             </div>
         </div>
     );
