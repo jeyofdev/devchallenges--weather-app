@@ -3,6 +3,7 @@ import {
     SET_LOCATION_INFOS,
     SET_SEARCH_CITY,
     SET_DAY_TODAY,
+    SET_DAYS_WEEK,
 } from '../actions/actionTypes';
 
 const initialState = {
@@ -13,6 +14,7 @@ const initialState = {
     },
     days: {
         today: null,
+        week: null,
     },
 };
 
@@ -34,6 +36,11 @@ const weatherReducer = (state = initialState, action) => {
             return {
                 ...state,
                 days: { ...state.days, today: action.payload },
+            };
+        case SET_DAYS_WEEK:
+            return {
+                ...state,
+                days: { ...state.days, week: action.payload },
             };
         default:
             return state;

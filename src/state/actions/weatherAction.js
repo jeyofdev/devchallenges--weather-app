@@ -1,5 +1,6 @@
 import axios from 'axios';
 import {
+    SET_DAYS_WEEK,
     SET_DAY_TODAY,
     SET_LOCATION_CITY,
     SET_LOCATION_INFOS,
@@ -80,5 +81,15 @@ export const setDayTodayAction = (locationInfos) => {
         dispatch({
             type: SET_DAY_TODAY,
             payload: todayInfos[0],
+        });
+};
+
+export const setDayWeekAction = (locationInfos) => {
+    const weekInfos = locationInfos.days.filter((day, index) => index !== 0);
+
+    return (dispatch) =>
+        dispatch({
+            type: SET_DAYS_WEEK,
+            payload: weekInfos,
         });
 };

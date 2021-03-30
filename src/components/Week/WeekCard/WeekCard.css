@@ -1,0 +1,39 @@
+/* ====================
+    WEEK
+==================== */
+.descriptif_weather .weather_week .week_day {
+    background: var(--color-dark);
+    font-weight: 500;
+    font-size: 0.95rem;
+    text-align: center;
+    color: var(--color-light);
+    padding: 1rem 26px;
+}
+
+.descriptif_weather .weather_week .week_day h2 {
+    margin-bottom: 10px;
+}
+
+.descriptif_weather .weather_week .week_day > .temperature {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+.descriptif_weather .weather_week .week_day > .temperature .min {
+    color: var(--color-gray-300);
+}
+
+.descriptif_weather .weather_week .week_day > .week_img {
+    width: 80%;
+    margin: 0 auto;
+    max-width: 90px;
+}
+
+.descriptif_weather .weather_week .week_day > .week_img.more {
+    margin-bottom: 2.75rem;
+}
+
+.descriptif_weather .weather_week .week_day > .week_img img {
+    width: 100%;
+}

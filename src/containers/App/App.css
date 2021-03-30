@@ -59,6 +59,11 @@
     justify-content: center;
 }
 
+.descriptif_weather .container {
+    padding-top: 52px;
+    padding-bottom: 24px;
+}
+
 @media (max-width: 768px) {
     .today_weather,
     .today_weather .container {
@@ -67,10 +72,14 @@
 }
 
 @media (min-width: 768px) {
-    .today_weather .container {
+    .today_weather .container,
+    .descriptif_weather .container {
         padding-top: 42px;
         max-width: 904px;
         min-height: 100vh;
+    }
+
+    .today_weather .container {
         position: fixed;
         width: 40%;
         padding-bottom: 52px;

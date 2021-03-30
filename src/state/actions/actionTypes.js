@@ -2,3 +2,4 @@ export const SET_SEARCH_CITY = 'SET_SEARCH_CITY';
 export const SET_LOCATION_CITY = 'SET_LOCATION_CITY';
 export const SET_LOCATION_INFOS = 'SET_LOCATION_INFOS';
 export const SET_DAY_TODAY = 'SET_DAY_TODAY';
+export const SET_DAYS_WEEK = 'SET_DAYS_WEEK';
