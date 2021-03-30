@@ -2,10 +2,12 @@ import axios from 'axios';
 import {
     SET_DAYS_WEEK,
     SET_DAY_TODAY,
+    SET_IS_CELSIUS,
     SET_LOCATION_CITY,
     SET_LOCATION_INFOS,
     SET_SEARCH_CITY,
 } from './actionTypes';
+import convertCelciusToFahrenheit from '../../helpers/calculHelpers';
 
 const corsApiUrl = 'https://cors-anywhere-venky.herokuapp.com/';
 
@@ -32,7 +34,7 @@ export const setLocationCityAction = (searchCity) => {
             );
 };
 
-export const setLocationInfosAction = (locationCity) => {
+export const setLocationInfosAction = (locationCity, isCelsius) => {
     const url = `${corsApiUrl}https://www.metaweather.com/api/location/${locationCity.woeid}/`;
 
     return (dispatch) =>
@@ -47,9 +49,15 @@ export const setLocationInfosAction = (locationCity) => {
                     humidity: day.humidity,
                     id: day.id,
                     temperature: {
-                        max: day.max_temp,
-                        min: day.min_temp,
-                        temp: day.the_temp,
+                        max: isCelsius
+                            ? day.max_temp
+                            : convertCelciusToFahrenheit(day.max_temp),
+                        min: isCelsius
+                            ? day.min_temp
+                            : convertCelciusToFahrenheit(day.min_temp),
+                        temp: isCelsius
+                            ? day.the_temp
+                            : convertCelciusToFahrenheit(day.the_temp),
                     },
                     visibility: day.visibility.toFixed(1),
                     weather_state: {
@@ -91,5 +99,12 @@ export const setDayWeekAction = (locationInfos) => {
         dispatch({
             type: SET_DAYS_WEEK,
             payload: weekInfos,
+        });
+};
+
+export const setIsCelsiusAction = () => {
+    return (dispatch) =>
+        dispatch({
+            type: SET_IS_CELSIUS,
         });
 };

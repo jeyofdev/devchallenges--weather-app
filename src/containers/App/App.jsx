@@ -7,13 +7,12 @@ import {
     setLocationInfosAction,
 } from '../../state/actions/weatherAction';
 import Today from '../../components/Today/Today';
-import WeekCardList from '../WeekCardList/WeekCardList';
-import Highlights from '../../components/Week/Highlights/Highlights';
+import Main from '../Main/Main';
 import './App.css';
 
 const App = () => {
     const dispatch = useDispatch();
-    const { searchCity, location, days } = useSelector(
+    const { searchCity, location, isCelsius } = useSelector(
         (state) => state.weather
     );
 
@@ -21,24 +20,19 @@ const App = () => {
         if (location.city === null) {
             dispatch(setLocationCityAction(searchCity));
         } else if (location.infos === null) {
-            dispatch(setLocationInfosAction(location.city));
+            dispatch(setLocationInfosAction(location.city, isCelsius));
         }
 
-        if (location.infos !== null && days.today === null) {
+        if (location.infos !== null) {
             dispatch(setDayTodayAction(location.infos));
             dispatch(setDayWeekAction(location.infos));
         }
-    }, [location]);
+    }, [location, location.infos]);
+
     return (
         <div className="App">
             <Today />
-
-            <div className="descriptif_weather">
-                <div className="container">
-                    <WeekCardList />
-                    {days.today !== null && <Highlights />}
-                </div>
-            </div>
+            <Main />
         </div>
     );
 };

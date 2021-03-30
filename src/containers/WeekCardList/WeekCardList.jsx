@@ -1,6 +1,6 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
-import WeekCard from '../../components/Week/WeekCard/WeekCard';
+import WeekCard from '../../components/Main/WeekCard/WeekCard';
 import './WeekCardList.css';
 
 const WeekCardList = () => {

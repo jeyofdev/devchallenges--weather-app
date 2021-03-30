@@ -1,0 +1,35 @@
+/* ====================
+    HEADER
+==================== */
+.descriptif_weather .weather_header {
+    display: none;
+}
+
+.descriptif_weather .weather_header > Button {
+    background: var(--color-light);
+    width: 40px;
+    height: 40px;
+    border-radius: 54px;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 21px;
+    padding: 10px 11px;
+    color: var(--color-dark);
+}
+
+.descriptif_weather .weather_header > Button:disabled {
+    background: #585676;
+    color: var(--color-light);
+}
+
+.descriptif_weather .weather_header > Button:last-child {
+    margin-left: 12px;
+}
+
+@media (min-width: 768px) {
+    .descriptif_weather .weather_header {
+        display: flex;
+        justify-content: flex-end;
+        margin-bottom: 66px;
+    }
+}

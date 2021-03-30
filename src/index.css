@@ -134,6 +134,17 @@ table {
     border-spacing: 0;
 }
 
+button {
+    font-size: 1rem;
+    line-height: 1.1875;
+    cursor: pointer;
+    border: none;
+}
+
+button:disabled {
+    cursor: default;
+}
+
 div,
 h1,
 h2,
@@ -142,7 +153,8 @@ h4,
 h5,
 h6,
 p,
-span {
+span,
+button {
     font-family: var(--font-family-primary);
     font-style: normal;
     line-height: 1;

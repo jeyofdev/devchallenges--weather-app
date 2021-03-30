@@ -4,6 +4,7 @@ import {
     SET_SEARCH_CITY,
     SET_DAY_TODAY,
     SET_DAYS_WEEK,
+    SET_IS_CELSIUS,
 } from '../actions/actionTypes';
 
 const initialState = {
@@ -16,6 +17,7 @@ const initialState = {
         today: null,
         week: null,
     },
+    isCelsius: true,
 };
 
 const weatherReducer = (state = initialState, action) => {
@@ -41,6 +43,11 @@ const weatherReducer = (state = initialState, action) => {
             return {
                 ...state,
                 days: { ...state.days, week: action.payload },
+            };
+        case SET_IS_CELSIUS:
+            return {
+                ...state,
+                isCelsius: !state.isCelsius,
             };
         default:
             return state;
