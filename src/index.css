@@ -135,14 +135,18 @@ table {
 }
 
 button {
-    font-size: 1rem;
-    line-height: 1.1875;
     cursor: pointer;
     border: none;
 }
 
 button:disabled {
     cursor: default;
+}
+
+button,
+::placeholder {
+    font-size: 1rem;
+    line-height: 1.1875;
 }
 
 div,

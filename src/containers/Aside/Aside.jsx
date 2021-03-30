@@ -5,7 +5,7 @@ import { MdPlace } from 'react-icons/md';
 import generateImage from '../../helpers/imageHelpers';
 import CloudBackground from '../../assets/img/Cloud-background.png';
 import Loading from '../../components/Ui/Loader/Loading';
-import Header from '../../components/Aside/Header';
+import Header from '../../components/Aside/Header/Header';
 import './Aside.css';
 
 const Aside = () => {

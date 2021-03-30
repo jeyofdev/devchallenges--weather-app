@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import Modal from '../../components/Aside/Modal/Modal';
 import {
     setDayTodayAction,
     setDayWeekAction,
@@ -17,22 +18,29 @@ const App = () => {
     );
 
     useEffect(() => {
+        dispatch(setLocationCityAction(searchCity));
+    }, [searchCity]);
+
+    useEffect(() => {
         if (location.city === null) {
             dispatch(setLocationCityAction(searchCity));
-        } else if (location.infos === null) {
+        } else {
             dispatch(setLocationInfosAction(location.city, isCelsius));
         }
+    }, [location.city]);
 
+    useEffect(() => {
         if (location.infos !== null) {
             dispatch(setDayTodayAction(location.infos));
             dispatch(setDayWeekAction(location.infos));
         }
-    }, [location, location.infos]);
+    }, [location.infos]);
 
     return (
         <div className="App">
             <Aside />
             <Main />
+            <Modal />
         </div>
     );
 };

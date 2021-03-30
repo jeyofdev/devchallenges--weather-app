@@ -9,8 +9,11 @@
     --color-light: #e7e7eb;
     --color-dark: #1e213a;
     --color-gray-100: #88869d;
+    --color-gray-200: #616475;
     --color-gray-300: #a09fb1;
     --color-bg: #100e1d;
+    --color-primary: #3c47e9;
+    --color-danger: #eb6b6b;
     --color-default: #737a6e;
 
     --font-family-primary: 'Raleway', sans-serif;
