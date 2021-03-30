@@ -9,7 +9,7 @@ import {
 } from './actionTypes';
 import convertCelciusToFahrenheit from '../../helpers/calculHelpers';
 
-const corsApiUrl = 'https://cors-anywhere-venky.herokuapp.com/';
+export const corsApiUrl = 'https://cors-anywhere-venky.herokuapp.com/';
 
 export const setSearchCityAction = (city) => {
     return (dispatch) =>

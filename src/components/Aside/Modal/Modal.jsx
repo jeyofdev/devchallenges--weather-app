@@ -1,9 +1,13 @@
 import React, { useState } from 'react';
+import axios from 'axios';
 import { MdClear, MdKeyboardArrowRight } from 'react-icons/md';
 import { useSelector, useDispatch } from 'react-redux';
 import setModalIsShowAction from '../../../state/actions/modalAction';
 import setChoicesAction from '../../../state/actions/choicesAction';
-import { setSearchCityAction } from '../../../state/actions/weatherAction';
+import {
+    corsApiUrl,
+    setSearchCityAction,
+} from '../../../state/actions/weatherAction';
 import './Modal.css';
 
 const Modal = () => {
@@ -21,9 +25,39 @@ const Modal = () => {
     const handleSubmit = (e) => {
         e.preventDefault();
 
+        /**
+         * check that the new choice :
+         * - contains the required number of characters,
+         * - That it is not already available
+         * - That it contains data in the API
+         *
+         */
         if (newChoice.length > 3) {
-            dispatch(setChoicesAction(choices, newChoice));
-            setFormError('');
+            const url = `https://www.metaweather.com/api/location/search/?query=${newChoice}`;
+
+            axios
+                .get(`${corsApiUrl}${url}`)
+                .then((response) => response.data)
+                .then((datas) => {
+                    if (datas.length > 0) {
+                        const compare = choices.filter(
+                            (choice) => choice === datas[0].title
+                        );
+
+                        if (compare.length === 0) {
+                            dispatch(setChoicesAction(choices, datas[0].title));
+                            setFormError('');
+                        } else {
+                            setFormError(
+                                'The city you entered is already available below'
+                            );
+                        }
+                    } else {
+                        setFormError(
+                            'The city you have entered does not contain any weather data.'
+                        );
+                    }
+                });
         } else {
             setFormError('You must enter at least 4 characters');
         }

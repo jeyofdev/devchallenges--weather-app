@@ -78,6 +78,7 @@
     color: var(--color-danger);
     font-weight: 700;
     margin-top: 0.8rem;
+    line-height: 1.2;
 }
 
 .modal > .choices_list {
