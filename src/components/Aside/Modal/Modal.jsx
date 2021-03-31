@@ -32,7 +32,7 @@ const Modal = () => {
          * - That it contains data in the API
          *
          */
-        if (newChoice.length > 3) {
+        if (newChoice.length > 2) {
             const url = `https://www.metaweather.com/api/location/search/?query=${newChoice}`;
 
             axios
@@ -59,7 +59,7 @@ const Modal = () => {
                     }
                 });
         } else {
-            setFormError('You must enter at least 4 characters');
+            setFormError('You must enter at least 3 characters');
         }
 
         setNewChoice('');

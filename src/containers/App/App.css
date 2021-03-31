@@ -17,6 +17,7 @@
     --color-default: #737a6e;
 
     --font-family-primary: 'Raleway', sans-serif;
+    --font-family-secondary: 'Montserrat', sans-serif;
 }
 
 /* ====================
@@ -55,6 +56,30 @@
     padding-left: var(--gutter);
     margin-right: auto;
     margin-left: auto;
+}
+
+@media (min-width: 576px) {
+    .container {
+        max-width: 540px;
+    }
+}
+
+@media (min-width: 992px) {
+    .container {
+        max-width: 960px;
+    }
+}
+
+@media (min-width: 768px) {
+    .container {
+        max-width: 720px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1140px;
+    }
 }
 
 .today_weather .container {
