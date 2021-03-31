@@ -8,7 +8,7 @@ import {
 } from '../actions/actionTypes';
 
 const initialState = {
-    searchCity: 'bordeaux',
+    searchCity: 'paris',
     location: {
         city: null,
         infos: null,

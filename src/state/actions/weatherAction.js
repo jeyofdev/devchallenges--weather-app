@@ -19,8 +19,19 @@ export const setSearchCityAction = (city) => {
         });
 };
 
+export const setSearchCityByGeolocationAction = (latitude, longitude) => {
+    return (dispatch) =>
+        dispatch({
+            type: SET_SEARCH_CITY,
+            payload: { latitude, longitude },
+        });
+};
+
 export const setLocationCityAction = (searchCity) => {
-    const url = `https://www.metaweather.com/api/location/search/?query=${searchCity}`;
+    const url =
+        typeof searchCity === 'string'
+            ? `https://www.metaweather.com/api/location/search/?query=${searchCity}`
+            : `https://www.metaweather.com/api/location/search/?lattlong=${searchCity.latitude},${searchCity.longitude}`;
 
     return (dispatch) =>
         axios

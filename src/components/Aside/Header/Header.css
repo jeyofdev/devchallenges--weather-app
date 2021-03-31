@@ -36,6 +36,6 @@
     border-radius: 100%;
 }
 
-.navbar .btn_gps > .material-icons {
+.navbar .btn_gps > .icon {
     color: var(--color-light);
 }
