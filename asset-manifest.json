@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/devchallenges--weather-app/static/css/main.45abd73a.chunk.css",
+    "main.js": "/devchallenges--weather-app/static/js/main.c596ad30.chunk.js",
+    "main.js.map": "/devchallenges--weather-app/static/js/main.c596ad30.chunk.js.map",
+    "runtime-main.js": "/devchallenges--weather-app/static/js/runtime-main.1c4429dc.js",
+    "runtime-main.js.map": "/devchallenges--weather-app/static/js/runtime-main.1c4429dc.js.map",
+    "static/js/2.2265870b.chunk.js": "/devchallenges--weather-app/static/js/2.2265870b.chunk.js",
+    "static/js/2.2265870b.chunk.js.map": "/devchallenges--weather-app/static/js/2.2265870b.chunk.js.map",
+    "index.html": "/devchallenges--weather-app/index.html",
+    "static/css/main.45abd73a.chunk.css.map": "/devchallenges--weather-app/static/css/main.45abd73a.chunk.css.map",
+    "static/js/2.2265870b.chunk.js.LICENSE.txt": "/devchallenges--weather-app/static/js/2.2265870b.chunk.js.LICENSE.txt",
+    "static/media/WeekCard.css": "/devchallenges--weather-app/static/media/Clear.6e4f36b6.png",
+    "static/media/Cloud-background.f88244c2.png": "/devchallenges--weather-app/static/media/Cloud-background.f88244c2.png",
+    "static/media/LightCloud.edc43777.png": "/devchallenges--weather-app/static/media/LightCloud.edc43777.png",
+    "static/media/Shower.ea1e199a.png": "/devchallenges--weather-app/static/media/Shower.ea1e199a.png",
+    "static/media/Sleet.6ef96c5a.png": "/devchallenges--weather-app/static/media/Sleet.6ef96c5a.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.1c4429dc.js",
+    "static/js/2.2265870b.chunk.js",
+    "static/css/main.45abd73a.chunk.css",
+    "static/js/main.c596ad30.chunk.js"
+  ]
+}
