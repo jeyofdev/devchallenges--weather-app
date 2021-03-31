@@ -1,6 +1,6 @@
 import { SET_CHOICES } from '../actions/actionTypes';
 
-const initialState = ['paris', 'London', 'Barcelona', 'Madrid'];
+const initialState = ['Paris', 'London', 'Barcelona', 'Madrid'];
 
 const choicesReducer = (state = initialState, action) => {
     switch (action.type) {

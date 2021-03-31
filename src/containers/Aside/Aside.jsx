@@ -8,7 +8,7 @@ import Header from '../../components/Aside/Header/Header';
 import './Aside.css';
 
 const Aside = () => {
-    const { location, days } = useSelector((state) => state.weather);
+    const { location, days, isCelsius } = useSelector((state) => state.weather);
     const { isShow } = useSelector((state) => state.modal);
 
     return (
@@ -37,7 +37,7 @@ const Aside = () => {
                         <div className="today_content">
                             <p className="content_temperature">
                                 {Math.round(days.today.temperature.temp)}
-                                <span>°C</span>
+                                <span>°{isCelsius ? 'C' : 'F'}</span>
                             </p>
                             <p className="content_type">
                                 {days.today.weather_state.name}

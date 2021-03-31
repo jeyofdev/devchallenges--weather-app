@@ -1,10 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { useSelector } from 'react-redux';
 import moment from 'moment';
 import generateImage from '../../../helpers/imageHelpers';
 import './WeekCard.css';
 
 const WeekCard = ({ day, index }) => {
+    const { isCelsius } = useSelector((state) => state.weather);
+
     const formatDate = () => {
         if (index !== 0) {
             return moment(day.date).format('ddd, DD MMM');
@@ -31,9 +34,12 @@ const WeekCard = ({ day, index }) => {
                 />
             </div>
             <div className="temperature">
-                <p className="max">{Math.round(day.temperature.max)}°C</p>
+                <p className="max">
+                    {Math.round(day.temperature.max)}°{isCelsius ? 'C' : 'F'}
+                </p>
                 <p className="min">
-                    <span>{Math.round(day.temperature.min)}</span>°C
+                    <span>{Math.round(day.temperature.min)}</span>°
+                    {isCelsius ? 'C' : 'F'}
                 </p>
             </div>
         </div>
