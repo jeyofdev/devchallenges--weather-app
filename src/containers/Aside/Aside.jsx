@@ -4,19 +4,19 @@ import moment from 'moment';
 import { MdPlace } from 'react-icons/md';
 import generateImage from '../../helpers/imageHelpers';
 import CloudBackground from '../../assets/img/Cloud-background.png';
-import Loading from '../../components/Ui/Loader/Loading';
 import Header from '../../components/Aside/Header/Header';
 import './Aside.css';
 
 const Aside = () => {
     const { location, days } = useSelector((state) => state.weather);
+    const { isShow } = useSelector((state) => state.modal);
 
     return (
         <div className="today_weather">
             <div className="container">
-                <Header />
-                {days.today ? (
+                {!isShow && days.today && (
                     <>
+                        <Header />
                         <div className="today_img">
                             <div>
                                 <img
@@ -52,8 +52,6 @@ const Aside = () => {
                             </p>
                         </div>
                     </>
-                ) : (
-                    <Loading />
                 )}
             </div>
         </div>

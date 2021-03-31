@@ -17,6 +17,11 @@
     color: var(--color-dark);
 }
 
+.descriptif_weather .weather_header > Button:hover {
+    color: var(--color-light);
+    background: var(--color-dark);
+}
+
 .descriptif_weather .weather_header > Button:disabled {
     background: #585676;
     color: var(--color-light);

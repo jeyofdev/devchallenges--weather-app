@@ -2,6 +2,9 @@
     WEEK
 ==================== */
 .descriptif_weather .weather_week .week_day {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     background: var(--color-dark);
     font-weight: 500;
     font-size: 0.95rem;
@@ -28,6 +31,12 @@
     width: 80%;
     margin: 0 auto;
     max-width: 90px;
+}
+
+.descriptif_weather .weather_week .week_day > .week_img.sun {
+    background: url(../../../assets/img/Clear.png) no-repeat;
+    background-size: 60%;
+    background-position: 10% 0%;
 }
 
 .descriptif_weather .weather_week .week_day > .week_img.more {

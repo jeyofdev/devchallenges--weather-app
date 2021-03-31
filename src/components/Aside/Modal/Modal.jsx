@@ -8,6 +8,7 @@ import {
     corsApiUrl,
     setSearchCityAction,
 } from '../../../state/actions/weatherAction';
+import toCapitalize from '../../../helpers/stringHelpers';
 import './Modal.css';
 
 const Modal = () => {
@@ -45,7 +46,12 @@ const Modal = () => {
                         );
 
                         if (compare.length === 0) {
-                            dispatch(setChoicesAction(choices, datas[0].title));
+                            dispatch(
+                                setChoicesAction(
+                                    choices,
+                                    toCapitalize(datas[0].title)
+                                )
+                            );
                             setFormError('');
                         } else {
                             setFormError(

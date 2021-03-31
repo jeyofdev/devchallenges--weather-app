@@ -16,8 +16,19 @@ const WeekCard = ({ day, index }) => {
     return (
         <div className="week_day">
             <h2 className="day">{formatDate()}</h2>
-            <div className="week_img sun">
-                <img src={generateImage(day.weather_state.abbr)} alt="" />
+            <div
+                className={`week_img ${
+                    day.weather_state.abbr === 'sn' ||
+                    day.weather_state.abbr === 'sl' ||
+                    day.weather_state.abbr === 't'
+                        ? 'sun'
+                        : ''
+                }`}
+            >
+                <img
+                    src={generateImage(day.weather_state.abbr)}
+                    alt={day.weather_state.name}
+                />
             </div>
             <div className="temperature">
                 <p className="max">{Math.round(day.temperature.max)}°C</p>

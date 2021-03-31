@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import Modal from '../../components/Aside/Modal/Modal';
+import Loading from '../../components/Ui/Loader/Loading';
 import {
     setDayTodayAction,
     setDayWeekAction,
@@ -13,7 +14,7 @@ import './App.css';
 
 const App = () => {
     const dispatch = useDispatch();
-    const { searchCity, location, isCelsius } = useSelector(
+    const { searchCity, location, days, isCelsius } = useSelector(
         (state) => state.weather
     );
 
@@ -37,10 +38,16 @@ const App = () => {
     }, [location.infos]);
 
     return (
-        <div className="App">
-            <Aside />
-            <Main />
-            <Modal />
+        <div className={`App ${days.today ? 'grid' : ''}`}>
+            {days.today ? (
+                <>
+                    <Aside />
+                    <Main />
+                    <Modal />
+                </>
+            ) : (
+                <Loading />
+            )}
         </div>
     );
 };
